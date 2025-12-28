@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Aegis Solution</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/aegis-logo-new.png" alt="Aegis Solution" style="height: 48px; width: auto;">
+                <span style="margin-left: 0.75rem; color: var(--primary-color);">Aegis Solution</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product / Solution</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="sdg.html">SDG Alignment</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Hero -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h1>Cold Chamber Health Monitoring Dashboard</h1>
+            <p class="lead" style="max-width: 800px; margin: 0 auto;">A centralized real-time monitoring interface
+                designed for supervisors to continuously track the health and activity status of industrial workers.</p>
+        </div>
+    </section>
+
+    <!-- Live Dashboard -->
+    <section class="section">
+        <div class="container">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+                <h2>Live Supervisor Dashboard</h2>
+                <span id="live-status-indicator" class="status-badge status-success">
+                    <i class="fas fa-circle"></i> <span id="live-status-text">System Active</span>
+                </span>
+            </div>
+
+            <!-- Employee Grid -->
+            <div class="grid grid-3" style="margin-bottom: var(--spacing-lg);">
+                <!-- Active Employee Card -->
+                <div class="card" style="border-top: 4px solid var(--success-color);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-weight: 700;">EMP-101 (Ravi K.)</span>
+                        <span class="text-small" style="color: var(--text-light);">Zone A</span>
+                    </div>
+                    <div class="metric-row">
+                        <div class="metric">
+                            <i class="fas fa-heartbeat" style="color: var(--danger-color);"></i>
+                            <span class="metric-value" id="live-bpm">72</span> <span class="metric-unit">BPM</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-thermometer-half" style="color: var(--warning-color);"></i>
+                            <span class="metric-value" id="live-temp">36.6</span> <span class="metric-unit">°C</span>
+                        </div>
+                    </div>
+                    <!-- Live Chart Container -->
+                    <div style="height: 60px; margin-top: 1rem;">
+                        <canvas id="heartRateChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Static Employee Card 2 -->
+                <div class="card" style="border-top: 4px solid var(--success-color);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-weight: 700;">EMP-102 (Anitha R.)</span>
+                        <span class="text-small" style="color: var(--text-light);">Zone B</span>
+                    </div>
+                    <div class="metric-row">
+                        <div class="metric">
+                            <i class="fas fa-heartbeat" style="color: var(--danger-color);"></i>
+                            <span class="metric-value">75</span> <span class="metric-unit">BPM</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-thermometer-half" style="color: var(--warning-color);"></i>
+                            <span class="metric-value">36.8</span> <span class="metric-unit">°C</span>
+                        </div>
+                    </div>
+                    <div
+                        style="height: 60px; margin-top: 1rem; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border-radius: 4px; color: #9ca3af; font-size: 0.8rem;">
+                        Signal Stable
+                    </div>
+                </div>
+
+                <!-- Add Employee Placeholder -->
+                <div class="card dashed-border"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; color: var(--primary-color);">
+                    <i class="fas fa-plus-circle" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <span style="font-weight: 600;">Add Worker</span>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-2">
+                <div class="card">
+                </div>
+                <div style="text-align: center; padding: 0.5rem; background: var(--bg-light); border-radius: 4px;">
+                    <i class="fas fa-thermometer-half" style="color: var(--warning-color);"></i>
+                    <strong>Temperature</strong>
+                </div>
+                <div style="text-align: center; padding: 0.5rem; background: var(--bg-light); border-radius: 4px;">
+                    <i class="fas fa-lungs" style="color: var(--primary-color);"></i>
+                    <strong>Resp. Rate</strong>
+                </div>
+                <div style="text-align: center; padding: 0.5rem; background: var(--bg-light); border-radius: 4px;">
+                    <i class="fas fa-running" style="color: var(--success-color);"></i>
+                    <strong>Activity</strong>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Dashboard Features</h2>
+
+            <div class="grid grid-2" style="align-items: center; margin-bottom: var(--spacing-xl);">
+                <div>
+                    <h3>Device & Worker Management</h3>
+                    <p>The dashboard supports dynamic employee assignment to wearable devices.</p>
+                    <ul style="margin-top: var(--spacing-md);">
+                        <li><strong>Device Selection:</strong> Shows connected status and hardware ID.</li>
+                        <li><strong>Employee Profiles:</strong> Manage name, age, blood group, and contact info.</li>
+                        <li><strong>Quick Onboarding:</strong> New employees can be added securely without downtime.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="assets/images/dashboard-add-employee.png" alt="Add Employee Modal"
+                        style="border-radius: 8px; box-shadow: var(--shadow-md);">
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4><i class="fas fa-chart-line"></i> Continuous Monitoring</h4>
+                    <p>Time-series graphs for Heart Rate, Temperature, Respiratory Rate, and Blood Pressure to observe
+                        trends and detect anomalies.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-exclamation-circle"></i> Health Alert System</h4>
+                    <p>Edge-based logic triggers alerts (Green/Yellow/Red) instantly without cloud dependency, ensuring
+                        safety during network failures.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-history"></i> Data Logging</h4>
+                    <p>Maintains time-stamped health readings and alert history for safety audits, compliance reporting,
+                        and incident analysis.</p>
+                </div>
+            </div>
+            <!-- Features Grid -->
+            <div class="grid grid-2">
+                <div class="feature-card">
+                    <i class="fas fa-bell feature-icon"></i>
+                    <h3>Real-time Alerts</h3>
+                    <p>Immediate notifications for falls, abnormal vitals, or geofence breaches. Configurable thresholds
+                        for different work zones.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-history feature-icon"></i>
+                    <h3>Historical Analytics</h3>
+                    <p>Review shift patterns, exposure times, and health trends to optimize worker schedules and prevent
+                        fatigue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Analytics View -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2 style="margin-bottom: var(--spacing-lg);">Deep Dive Analytics</h2>
+            <img src="assets/images/dashboard-analytics-preview.png" alt="Aegis Detailed Analytics Dashboard"
+                style="width: 100%; max-width: 1000px; border-radius: 8px; box-shadow: var(--shadow-xl); border: 1px solid var(--border-color);">
+            <p class="text-small" style="margin-top: 1rem; color: var(--text-light);">Comprehensive historical data view
+                for post-shift analysis and compliance auditing using Delphi-TVS standards.</p>
+        </div>
+    </section>
+
+    <!-- Trust Statement -->
+    <section class="section text-center">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3>Trust & Reliability</h3>
+                <p>This dashboard represents a working proof-of-concept built using real sensor data, edge processing,
+                    and industrial communication protocols. It is designed as a foundation for deployable, scalable, and
+                    compliant industrial safety systems.</p>
+            </div>
+            <div class="hero-buttons" style="margin-top: var(--spacing-lg);">
+                <a href="sdg.html" class="btn btn-outline">Explore SDG Alignment</a>
+                <a href="contact.html" class="btn btn-primary">Request Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="color: white;">Aegis Solution</h3>
+                    <p>Intelligent Safety Systems for Industrial Worker Health Monitoring.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Aegis Solution – Engineering safety,
+                        protecting lives.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product / Solution</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="sdg.html">SDG Alignment</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> knakul2006@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Aegis Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

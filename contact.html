@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Demo | Aegis Solution</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/aegis-logo-new.png" alt="Aegis Solution" style="height: 48px; width: auto;">
+                <span style="margin-left: 0.75rem; color: var(--primary-color);">Aegis Solution</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product / Solution</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="sdg.html">SDG Alignment</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="active btn btn-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p class="lead" style="max-width: 800px; margin: 0 auto;">Interested in learning more about Aegis Solution
+                or exploring how our safety system can be deployed in your facility?</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section bg-light" style="padding-top: var(--spacing-xl); padding-bottom: 4rem;">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: start;">
+                <!-- Contact Info & Demo -->
+                <div>
+                    <h2>Request a Product Demo</h2>
+                    <p>See how the Aegis Wearable Safety System works in real time.</p>
+                    <ul style="margin-top: 1rem; margin-bottom: 2rem;">
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Live dashboard
+                            walkthrough</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Wearable device
+                            overview</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Alert system
+                            demonstration</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Use-case discussion
+                        </li>
+                    </ul>
+
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 0.5rem;"><i class="fas fa-envelope"
+                            style="color: var(--primary-color); width: 20px;"></i> knakul2006@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary-color); width: 20px;"></i> Chennai,
+                        Tamil Nadu, India</p>
+                </div>
+
+                <!-- Form (Mockup) -->
+                <!-- Form (Expert Style) -->
+                <div class="card"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.1); padding: 2.5rem; background: white; border-radius: 12px;">
+                    <h3
+                        style="margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                        Send us a Message</h3>
+                    <form onsubmit="handleContactSubmit(event)" style="display: grid; gap: 1rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">First
+                                    Name</label>
+                                <input type="text" id="firstName" placeholder="John" required
+                                    style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: #f9fafb;">
+                            </div>
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Last
+                                    Name</label>
+                                <input type="text" id="lastName" placeholder="Doe"
+                                    style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: #f9fafb;">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Email
+                                Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required
+                                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: #f9fafb;">
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Organization</label>
+                            <select id="organization"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: #f9fafb;">
+                                <option>Industrial / Manufacturing</option>
+                                <option>Cold Storage / Logistics</option>
+                                <option>Academic / Research</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Message</label>
+                            <textarea id="message" rows="4" placeholder="How can we help?" required
+                                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: #f9fafb;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; padding: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Send
+                            Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Who Should Contact Us?</h2>
+            <div class="grid grid-3" style="margin-top: var(--spacing-lg);">
+                <div class="feature-card">
+                    <i class="fas fa-industry feature-icon"></i>
+                    <h4>Industry Partners</h4>
+                    <p>Industrial safety teams, MSMEs, factory owners, and cold storage operators.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-university feature-icon"></i>
+                    <h4>Academia</h4>
+                    <p>Academic evaluators, researchers, and innovation cells.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake feature-icon"></i>
+                    <h4>Collaborators</h4>
+                    <p>Incubation centers, pilot testers, and safety technology mentors.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <p class="lead">Let’s work together to build safer workplaces through intelligent engineering.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="color: white;">Aegis Solution</h3>
+                    <p>Intelligent Safety Systems for Industrial Worker Health Monitoring.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Aegis Solution – Engineering safety,
+                        protecting lives.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product / Solution</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="sdg.html">SDG Alignment</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> knakul2006@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Aegis Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

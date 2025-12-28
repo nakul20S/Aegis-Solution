@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product & Solution | Aegis Solution</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/aegis-logo-new.png" alt="Aegis Solution" style="height: 48px; width: auto;">
+                <span style="margin-left: 0.75rem; color: var(--primary-color);">Aegis Solution</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html" class="active">Product / Solution</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="sdg.html">SDG Alignment</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Hero -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h1>Aegis Wearable Safety System</h1>
+            <p class="lead" style="max-width: 800px; margin: 0 auto;">An IoT-based, edge-intelligent health monitoring
+                solution designed to protect industrial workers operating in extreme, sealed, and hazardous
+                environments.</p>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <div>
+                    <h2>The Problem We Solve</h2>
+                    <p>In many industrial settings, especially cold chambers (–20 °C) and sealed zones, workers operate
+                        with minimal supervision. Traditional safety methods are reactive and fail to detect emergencies
+                        in time.</p>
+                    <h4 style="margin-top: var(--spacing-md);">Critical Risks:</h4>
+                    <ul>
+                        <li><i class="fas fa-temperature-low" style="color: var(--primary-color);"></i> Hypothermia and
+                            fatigue due to extreme cold</li>
+                        <li><i class="fas fa-heartbeat" style="color: var(--primary-color);"></i> Sudden cardiac events
+                            or fainting going unnoticed</li>
+                        <li><i class="fas fa-user-injured" style="color: var(--primary-color);"></i> Falls or prolonged
+                            immobility in isolated chambers</li>
+                        <li><i class="fas fa-clock" style="color: var(--primary-color);"></i> Delayed response due to
+                            manual checks</li>
+                    </ul>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div class="card"
+                        style="background: linear-gradient(135deg, var(--primary-color), #001a2c); color: white; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 43, 73, 0.4); border-left: 6px solid var(--accent-color); padding: 2.5rem; width: 100%;">
+                        <h3 style="color: white; margin-bottom: 1rem;">Our Solution Approach</h3>
+                        <p style="opacity: 0.95; font-size: 1.05rem; line-height: 1.6;">A multi-tier, wearable-centric
+                            safety architecture that shifts industrial safety from
+                            reactive monitoring to proactive prevention.</p>
+                        <ol
+                            style="margin-left: 1.5rem; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                            <li style="font-weight: 500;">Wearable Safety Band</li>
+                            <li style="font-weight: 500;">Central Hub (Inside Zone)</li>
+                            <li style="font-weight: 500;">Main Monitoring Hub (Outside Zone)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Components -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-xl);">Core Product Components</h2>
+
+            <!-- Component 1 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: var(--spacing-xl);">
+                <div>
+                    <img src="assets/images/product-armband.png" alt="Wearable Safety Band"
+                        style="border-radius: 8px; box-shadow: var(--shadow-md);">
+                </div>
+                <div>
+                    <h3>1. Wearable Safety Band</h3>
+                    <p>A lightweight, non-intrusive armband designed for continuous industrial use.</p>
+                    <ul style="margin-top: var(--spacing-md);">
+                        <li><strong>ECG-based heart rate monitoring</strong> (medical-grade accuracy)</li>
+                        <li><strong>Body temperature monitoring</strong> with high precision</li>
+                        <li><strong>Motion and fall detection</strong> using IMU sensing</li>
+                        <li><strong>Low-power operation</strong> for full-shift monitoring</li>
+                        <li>Designed to operate reliably in sub-zero environments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Component 2 -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: var(--spacing-xl);">
+                <div style="order: 2;">
+                    <img src="assets/images/product-internal-hub.png" alt="Central Hub"
+                        style="border-radius: 8px; box-shadow: var(--shadow-md);">
+                </div>
+                <div style="order: 1;">
+                    <h3>2. Central Hub (Inside the Chamber)</h3>
+                    <p>The central hub acts as the local intelligence layer inside the hazardous environment.</p>
+                    <ul style="margin-top: var(--spacing-md);">
+                        <li>Receives real-time data from multiple wearables</li>
+                        <li>Performs edge-level analysis to detect abnormal conditions</li>
+                        <li>Integrates secondary presence and motion verification</li>
+                        <li>Forwards consolidated data via a robust wired link</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Component 3 -->
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <img src="assets/images/product-external-hub.png" alt="Main Monitoring Hub"
+                        style="border-radius: 8px; box-shadow: var(--shadow-md);">
+                </div>
+                <div>
+                    <h3>3. Main Monitoring & Alert Hub</h3>
+                    <p>Located outside the hazardous zone, this hub ensures clear and immediate human awareness.</p>
+                    <div style="margin-top: var(--spacing-md);">
+                        <p><i class="fas fa-circle" style="color: var(--success-color);"></i> <strong>Green
+                                Light:</strong> Worker condition normal</p>
+                        <p><i class="fas fa-circle" style="color: var(--warning-color);"></i> <strong>Yellow
+                                Light:</strong> Warning (temp drop, stillness)</p>
+                        <p><i class="fas fa-circle" style="color: var(--danger-color);"></i> <strong>Red Light +
+                                Buzzer:</strong> Emergency (fall, critical vitals)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture & Features -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Reliable Communication Architecture</h3>
+                    <p>Engineered for environments where standard wireless systems fail.</p>
+                    <ul>
+                        <li>Wireless low-latency communication between wearable and central hub</li>
+                        <li>Industrial-grade wired communication between internal and external hubs</li>
+                        <li>Immune to metal shielding, EMI noise, and sealed-chamber constraints</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Live Dashboard & Monitoring</h3>
+                    <p>Supervisors can access a web-based dashboard that provides:</p>
+                    <ul>
+                        <li>Real-time worker health status</li>
+                        <li>Vital parameter trends</li>
+                        <li>Alert history and event logs</li>
+                        <li>Multi-worker and multi-zone monitoring</li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-outline" style="margin-top: 1rem; font-size: 0.9rem;">View
+                        Dashboard Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value & Status -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2">
+                <div>
+                    <h2>Value to Industry & MSMEs</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Prevents accidents and medical emergencies</li>
+                        <li><i class="fas fa-check"></i> Improves worker confidence and productivity</li>
+                        <li><i class="fas fa-check"></i> Supports safety compliance and audits</li>
+                        <li><i class="fas fa-check"></i> Reduces downtime, liability, and operational risk</li>
+                        <li><i class="fas fa-check"></i> Enables Industry-4.0-ready safety adoption at low cost</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Product Status</h2>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                                style="color: var(--success-color);"></i> Functional Proof-of-Concept developed</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                                style="color: var(--success-color);"></i> Wearable + hub architecture validated</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                                style="color: var(--success-color);"></i> Real-time alerts demonstrated</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                                style="color: var(--success-color);"></i> Dashboard visualization implemented</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                                style="color: var(--success-color);"></i> Future-ready for AI and cloud expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Validation -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="text-center">Research & Validation</h2>
+            <p class="text-center lead" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                Developed within the <strong>Live-In-Labs</strong> program at Sri Sairam Engineering College, Aegis has
+                undergone rigorous testing to ensure reliability in hostile environments.
+            </p>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3><i class="fas fa-snowflake" style="color: var(--primary-color);"></i> Extreme Cold Testing</h3>
+                    <p>The system has been validated for continuous operation in sub-zero conditions, a specific
+                        requirement for blast freezers and cold storage units.</p>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>Test Environment:</strong> Industrial Deep Freezer Simulation</li>
+                        <li><strong>Temperature:</strong> sustained operation at <strong>-20 °C</strong></li>
+                        <li><strong>Duration:</strong> 8-hour shift cycles</li>
+                        <li><strong>Outcome:</strong> 100% data transmission success rate with no battery degradation
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-network-wired" style="color: var(--primary-color);"></i> Signal Penetration
+                    </h3>
+                    <p>Overcoming the Faraday cage effect of sealed metal chambers.</p>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>Challenge:</strong> Thick insulated metal walls block Wi-Fi/Bluetooth.</li>
+                        <li><strong>Solution:</strong> Hybrid Wired-Wireless Mesh.</li>
+                        <li><strong>Latency:</strong> &lt; 200ms for alert triggering.</li>
+                        <li><strong>Redundancy:</strong> Local buzzer activation even if main server link fails.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-lg);">Technical Superiority</h2>
+            <div style="overflow-x: auto;">
+                <table
+                    style="width: 100%; border-collapse: collapse; margin-bottom: var(--spacing-xl); box-shadow: var(--shadow-sm);">
+                    <thead>
+                        <tr style="background: var(--primary-color); color: white;">
+                            <th style="padding: 1rem; text-align: left;">Feature</th>
+                            <th style="padding: 1rem; text-align: left;">Traditional Safety Button</th>
+                            <th style="padding: 1rem; text-align: left;">Camera Systems</th>
+                            <th style="padding: 1rem; text-align: left; background: var(--accent-color);">Aegis Solution
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 1rem; font-weight: 600;">Detection Method</td>
+                            <td style="padding: 1rem;">Manual Press (Reactive)</td>
+                            <td style="padding: 1rem;">Visual AI (Line of Sight required)</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--primary-color);">Automated Vitals &
+                                Fall Detection</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
+                            <td style="padding: 1rem; font-weight: 600;">Connectivity</td>
+                            <td style="padding: 1rem;">Wired (Fixed location)</td>
+                            <td style="padding: 1rem;">CCTV / Wi-Fi</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--primary-color);">Wired-Wireless
+                                Hybrid Mesh</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 1rem; font-weight: 600;">Offline Capability</td>
+                            <td style="padding: 1rem;">Yes</td>
+                            <td style="padding: 1rem;">Dependent on Server</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--primary-color);">Yes (Edge
+                                Computing)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
+                            <td style="padding: 1rem; font-weight: 600;">Health Monitoring</td>
+                            <td style="padding: 1rem;">None</td>
+                            <td style="padding: 1rem;">None</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--primary-color);">Medical-grade
+                                3-Lead ECG</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 1rem; font-weight: 600;">Cost</td>
+                            <td style="padding: 1rem;">Low</td>
+                            <td style="padding: 1rem;">High</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--primary-color);">Medium (High ROI)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Exposure -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="card" style="border-left: 4px solid var(--primary-color); background: white;">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Industry Exposure & Technical Inspiration
+                        </h2>
+                        <p style="margin-bottom: 1rem;">The design approach and system architecture of Aegis Solution
+                            have been shaped through exposure to industry-grade engineering practices, including
+                            technical insights and reference frameworks studied from <strong>Delphi–TVS
+                                Technologies</strong>.</p>
+                        <p>This exposure helped align the solution with real-world automotive and industrial safety
+                            standards, influencing decisions related to system reliability, modularity, and
+                            safety-focused design thinking.</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/images/delphi-tvs-logo.png" alt="Delphi-TVS Technologies"
+                            style="max-width: 200px; margin: 0 auto;">
+                        <p style="font-size: 0.8rem; color: #777; margin-top: 0.5rem; font-style: italic;">Referenced
+                            for industry-aligned system design practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Interested in seeing the system in action?</h2>
+            <div class="hero-buttons" style="margin-top: var(--spacing-md);">
+                <a href="dashboard.html" class="btn btn-primary">View Live Dashboard</a>
+                <a href="contact.html" class="btn btn-outline">Request Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="color: white;">Aegis Solution</h3>
+                    <p>Intelligent Safety Systems for Industrial Worker Health Monitoring.</p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Aegis Solution – Engineering safety,
+                        protecting lives.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product / Solution</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="sdg.html">SDG Alignment</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> knakul2006@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Aegis Solution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
